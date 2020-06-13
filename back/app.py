@@ -44,5 +44,66 @@ manager.add_command("db", MigrateCommand)
 def root():
     return render_template('index.html')
 
+@app.route('/login', methods=['POST'])
+def login():
+    if not request.is_json:
+        return jsonify({"msg": "The number is not correct"}), 400
+
+    email = request.json.get('email', None)
+    password = request.json.get('password', None)
+    
+
+    if not email or email == '':
+        return jsonify({"msg": "email / password invalid"}), 400
+    if not password or password == '':
+        return jsonify({"msg": "email / password invalid"}), 400
+
+    users = Users.query.filter_by(email=email).first()
+    if not users:
+        return jsonify({"msg": "Ops! Try again"}), 401
+
+    if bcrypt.check_password_hash(users.password, password):
+        access_token = create_access_token(identity=users.email)
+        data = {
+            "access_token": access_token,
+            "users": users.serialize()
+        }
+        return jsonify(data), 201
+    else:
+        return jsonify({"msg": "Ops! Try again"}), 401
+
+@app.route('/register', methods=['POST'])
+def register():
+    if not request.is_json:
+        return jsonify({"msg": "Invalid format"}), 400
+
+    email = request.json.get('email', None)
+    password = request.json.get('password', None)
+
+    if not email or email == '':
+        return jsonify({"msg": "ERROR: Enter correct mail"}), 400
+    if not password or password == '':
+        return jsonify({"msg": "ERROR: Enter correct password"}), 400
+
+    users = Users.query.filter_by(email=email).first()
+    if users:
+        return jsonify({"msg": "ERROR: Username all ready exist"}), 400
+
+    users = Users()
+    users.email = email
+    users.password = bcrypt.generate_password_hash(password)
+    users.role_id = 2
+
+    db.session.add(users)
+    db.session.commit()
+
+    access_token = create_access_token(identity=users.email)
+    data = {
+        "access_token": access_token,
+        "users": users.serialize()
+    }
+
+    return jsonify(data), 201
+
 if __name__ == '__main__':
     manager.run()
