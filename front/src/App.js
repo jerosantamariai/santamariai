@@ -5,6 +5,7 @@ import Navbar from './components/navbar';
 import TextEditor from './components/texteditor';
 import Home from './views/home';
 import NotFound from './views/notfound';
+import Footer from './components/footer';
 
 const App = props => {
   return (
@@ -16,13 +17,8 @@ const App = props => {
             <Route exact path="/" component={Home} />
             <Route component={NotFound} />
           </Switch>
+          <Footer />
         </BrowserRouter>
-        <div className="row">
-          <div className="col-md-4">
-            <h1>Texto 1</h1>
-            <TextEditor />
-          </div>
-        </div>
       </div>
     </>
   );
