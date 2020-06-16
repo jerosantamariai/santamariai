@@ -1,8 +1,21 @@
 /* CONFIGURACIONES GENERALES */
 
-.generalbg {
+.bg-black {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255, 1);
+}
+
+.stdbtn{
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.stdbtn:hover{
+  color: rgb(255, 255, 255, 1);
+  text-decoration: none !important;
+  background-color: rgb(150, 150, 150, 1);
+  padding: 10px;
+  border-radius: 50px;
 }
 
 .hrsolid{
@@ -12,4 +25,11 @@
 .noDecoration{
   text-decoration: none !important;
   
+}
+
+/* NAVBAR */
+
+.navbar{
+  max-height: 50px;
+  padding: 100px;
 }

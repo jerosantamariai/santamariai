@@ -4,32 +4,32 @@ import { Link } from 'react-router-dom';
 const Footer = props => {
     return (
         <>
-            <footer className="generalbg">
+            <footer className="bg-black">
                 <div className="container">
                     <div className="row text-center d-flex justify-content-center pt-4 my-2">
                         <div className="col-md-2 my-2">
                             <h6 className="text-uppercase font-weight-bold noDecoration">
-                                <Link to="#!">About us</Link>
+                                <Link className="stdbtn" to="#!">About us</Link>
                             </h6>
                         </div>
                         <div className="col-md-2 my-2">
                             <h6 className="text-uppercase font-weight-bold noDecoration">
-                                <Link to="#!">Products</Link>
+                                <Link className="stdbtn" to="#!">Products</Link>
                             </h6>
                         </div>
                         <div className="col-md-2 my-2">
                             <h6 className="text-uppercase font-weight-bold noDecoration">
-                                <Link to="#!">Awards</Link>
+                                <Link className="stdbtn" to="#!">Awards</Link>
                             </h6>
                         </div>
                         <div className="col-md-2 my-2">
                             <h6 className="text-uppercase font-weight-bold noDecoration">
-                                <Link to="#!">Help</Link>
+                                <Link className="stdbtn" to="#!">Help</Link>
                             </h6>
                         </div>
                         <div className="col-md-2 my-2">
                             <h6 className="text-uppercase font-weight-bold noDecoration">
-                                <Link to="#!">Contact</Link>
+                                <Link className="stdbtn" to="#!">Contact</Link>
                             </h6>
                         </div>
                     </div>
@@ -47,19 +47,19 @@ const Footer = props => {
                     <div className="row py-2">
                         <div className="col-md-12">
                             <div className="mb-4 d-flex justify-content-center">
-                                <a href="http://www.facebook.com" target="_blank">
+                                <a className="stdbtn" href="http://www.facebook.com" target="_blank">
                                     <i className="fab fa-facebook-f fa-lg white-text mr-5"> </i>
                                 </a>
-                                <a href="http://www.twitter.com" target="_blank">
+                                <a className="stdbtn" href="http://www.twitter.com" target="_blank">
                                     <i className="fab fa-twitter fa-lg white-text mr-5"> </i>
                                 </a>
-                                <a href="http://www.linkedin.com" target="_blank">
+                                <a className="stdbtn" href="http://www.linkedin.com" target="_blank">
                                     <i className="fab fa-linkedin-in fa-lg white-text mr-5"> </i>
                                 </a>
-                                <a href="http://www.instagram.com" target="_blank">
+                                <a className="stdbtn" href="http://www.instagram.com" target="_blank">
                                     <i className="fab fa-instagram fa-lg white-text mr-5"> </i>
                                 </a>
-                                <a href="http://www.pinterest.com" target="_blank">
+                                <a className="stdbtn" href="http://www.pinterest.com" target="_blank">
                                     <i className="fab fa-pinterest fa-lg white-text"> </i>
                                 </a>
                             </div>
