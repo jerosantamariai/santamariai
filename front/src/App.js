@@ -5,6 +5,7 @@ import Navbar from './components/navbar';
 import Home from './views/home';
 import NotFound from './views/notfound';
 import Footer from './components/footer';
+import Projects from './views/projects';
 
 const App = props => {
   return (
@@ -13,6 +14,7 @@ const App = props => {
         <BrowserRouter>
           <Navbar />
           <Switch>
+            <Route exact path="/proyectos" component={Projects} />
             <Route exact path="/" component={Home} />
             <Route component={NotFound} />
           </Switch>
