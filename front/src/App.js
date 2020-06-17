@@ -7,6 +7,7 @@ import NotFound from './views/notfound';
 import Footer from './components/footer';
 import Projects from './views/projects';
 import Perfil from './views/perfil';
+import Icom from './views/icom';
 
 const App = props => {
   return (
@@ -17,6 +18,7 @@ const App = props => {
           <Switch>
             <Route exact path="/proyectos" component={Projects} />
             <Route exact path="/miperfil" component={Perfil} />
+            <Route exact path="/icom" component={Icom} />
             <Route exact path="/" component={Home} />
             <Route component={NotFound} />
           </Switch>

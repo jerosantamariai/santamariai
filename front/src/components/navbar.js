@@ -15,6 +15,9 @@ const Navbar = () => {
                             <Link className="nav-link mr-3 stdbtn" to="/miperfil">Perfil <span className="sr-only">(current)</span></Link>
                         </li>
                         <li className="nav-item">
+                            <Link className="nav-link mr-3 stdbtn" to="/icom">Ing. Comercial</Link>
+                        </li>
+                        <li className="nav-item">
                             <Link className="nav-link mr-3 stdbtn" to="/proyectos">Proyectos</Link>
                         </li>
                         <li className="nav-item">
