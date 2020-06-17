@@ -12,6 +12,7 @@ import Fstack from './views/fstack';
 import SimpleCounter from './views/projects/exercises/simplecounter';
 import ContactList from './views/projects/exercises/contactlist';
 import SMBarber from './views/projects/web/smbarber';
+import Rapinmi from './views/projects/web/rapinmi';
 
 const App = props => {
   return (
@@ -24,6 +25,7 @@ const App = props => {
             <Route exact path="/proyectos/contadorsimple" component={SimpleCounter} />
             <Route exact path="/proyectos/listadecontactos" component={ContactList} />
             <Route exact path="/proyectos/smbarber" component={SMBarber} />
+            <Route exact path="/proyectos/rapinmi" component={Rapinmi} />
             <Route exact path="/miperfil" component={Perfil} />
             <Route exact path="/icom" component={Icom} />
             <Route exact path="/fstack" component={Fstack} />
