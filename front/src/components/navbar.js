@@ -18,10 +18,10 @@ const Navbar = () => {
                             <Link className="nav-link mr-3 stdbtn" to="/icom">Ing. Comercial</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link mr-3 stdbtn" to="/proyectos">Proyectos</Link>
+                            <Link className="nav-link mr-3 stdbtn" to="#">Full Stack</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link mr-3 stdbtn" to="#">Pricing</Link>
+                            <Link className="nav-link mr-3 stdbtn" to="/proyectos">Proyectos</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link stdbtn" to="#" tabindex="-1" aria-disabled="true">Disabled</Link>
