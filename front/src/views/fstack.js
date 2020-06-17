@@ -6,6 +6,8 @@ const Fstack = props => {
         <>
             <h1>Full Stack</h1>
             <Link to="/proyectos/contadorsimple">Contador Simple</Link>
+            <Link to="/proyectos/listadecontactos">Contador Simple</Link>
+            <Link to="/proyectos/SMBarber">SMBarber</Link>
         </>
     );
 }
