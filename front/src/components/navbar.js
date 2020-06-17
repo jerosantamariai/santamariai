@@ -12,10 +12,10 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item active">
-                            <Link className="nav-link mr-3 stdbtn" to="#">Home <span className="sr-only">(current)</span></Link>
+                            <Link className="nav-link mr-3 stdbtn" to="/miperfil">Perfil <span className="sr-only">(current)</span></Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link mr-3 stdbtn" to="#">Proyectos</Link>
+                            <Link className="nav-link mr-3 stdbtn" to="/proyectos">Proyectos</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link mr-3 stdbtn" to="#">Pricing</Link>
