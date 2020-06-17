@@ -18,7 +18,7 @@ const Navbar = () => {
                             <Link className="nav-link mr-3 stdbtn" to="/icom">Ing. Comercial</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link mr-3 stdbtn" to="#">Full Stack</Link>
+                            <Link className="nav-link mr-3 stdbtn" to="/fstack">Full Stack</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link mr-3 stdbtn" to="/proyectos">Proyectos</Link>

@@ -9,6 +9,7 @@ import Projects from './views/projects';
 import Perfil from './views/perfil';
 import Icom from './views/icom';
 import Fstack from './views/fstack';
+import SimpleCounter from './views/projects/simplecounter';
 
 const App = props => {
   return (
@@ -18,6 +19,7 @@ const App = props => {
           <Navbar />
           <Switch>
             <Route exact path="/proyectos" component={Projects} />
+            <Route exact path="/proyectos/contadorsimple" component={SimpleCounter} />
             <Route exact path="/miperfil" component={Perfil} />
             <Route exact path="/icom" component={Icom} />
             <Route exact path="/fstack" component={Fstack} />
