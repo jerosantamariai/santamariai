@@ -9,6 +9,7 @@ const Fstack = props => {
             <Link to="/proyectos/listadecontactos">Contador Simple</Link>
             <Link to="/proyectos/smbarber">SMBarber</Link>
             <Link to="/proyectos/rapinmi">Rapinmi</Link>
+            <Link to="/proyectos/tictactoe">Tic Tac Toe</Link>
         </>
     );
 }
