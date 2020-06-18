@@ -15,6 +15,7 @@ import SMBarber from './views/projects/web/smbarber';
 import Rapinmi from './views/projects/web/rapinmi';
 import TicTacToe from './views/projects/exercises/tictactoe';
 import TrafficLight from './views/projects/exercises/trafficlight';
+import PostCard from './views/projects/exercises/postcard';
 
 const App = props => {
   return (
@@ -24,6 +25,7 @@ const App = props => {
           <Navbar />
           <Switch>
             <Route exact path="/proyectos" component={Projects} />
+            <Route exact path="/proyectos/postal" component={PostCard} />
             <Route exact path="/proyectos/contadorsimple" component={SimpleCounter} />
             <Route exact path="/proyectos/listadecontactos" component={ContactList} />
             <Route exact path="/proyectos/tictactoe" component={TicTacToe} />

@@ -7,6 +7,7 @@ const Projects = props => {
             <h1>Proyectos!!!</h1>
             <h2>Ejercicios</h2>
             <ul>
+                <li><Link to="/proyectos/postal">Postal Simple</Link></li>
                 <li><Link to="/proyectos/contadorsimple">Contador Simple</Link></li>
                 <li><Link to="/proyectos/listadecontactos">Contador Simple</Link></li>
                 <li><Link to="/proyectos/tictactoe">Tic Tac Toe</Link></li>
