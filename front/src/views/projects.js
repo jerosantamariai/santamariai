@@ -9,6 +9,7 @@ const Projects = props => {
             <ul>
                 <li><Link to="/proyectos/postal">Postal Simple</Link></li>
                 <li><Link to="/proyectos/instagram">Instagram</Link></li>
+                <li><Link to="/proyectos/formulario">Formulario</Link></li>
                 <li><Link to="/proyectos/contadorsimple">Contador Simple</Link></li>
                 <li><Link to="/proyectos/listadecontactos">Contador Simple</Link></li>
                 <li><Link to="/proyectos/tictactoe">Tic Tac Toe</Link></li>

@@ -17,6 +17,7 @@ import TicTacToe from './views/projects/exercises/tictactoe';
 import TrafficLight from './views/projects/exercises/trafficlight';
 import PostCard from './views/projects/exercises/postcard';
 import Instagram from './views/projects/exercises/instagram';
+import Form from './views/projects/exercises/form';
 
 const App = props => {
   return (
@@ -28,6 +29,7 @@ const App = props => {
             <Route exact path="/proyectos" component={Projects} />
             <Route exact path="/proyectos/postal" component={PostCard} />
             <Route exact path="/proyectos/instagram" component={Instagram} />
+            <Route exact path="/proyectos/formulario" component={Form} />
             <Route exact path="/proyectos/contadorsimple" component={SimpleCounter} />
             <Route exact path="/proyectos/listadecontactos" component={ContactList} />
             <Route exact path="/proyectos/tictactoe" component={TicTacToe} />
