@@ -19,6 +19,7 @@ import PostCard from './views/projects/exercises/postcard';
 import Instagram from './views/projects/exercises/instagram';
 import Form from './views/projects/exercises/form';
 import ExcuseGenerator from './views/projects/exercises/excusegenerator';
+import DomainNameGenerator from './views/projects/exercises/domainnamegenerator';
 
 const App = props => {
   return (
@@ -31,7 +32,8 @@ const App = props => {
             <Route exact path="/proyectos/postal" component={PostCard} />
             <Route exact path="/proyectos/instagram" component={Instagram} />
             <Route exact path="/proyectos/formulario" component={Form} />
-            <Route exact path="/proyectos/generadordeexcusas" component={ExcuseGenerator} />
+            <Route exact path="/proyectos/generador_excusas" component={ExcuseGenerator} />
+            <Route exact path="/proyectos/generador_nombres_dominio" component={DomainNameGenerator} />
             <Route exact path="/proyectos/contadorsimple" component={SimpleCounter} />
             <Route exact path="/proyectos/listadecontactos" component={ContactList} />
             <Route exact path="/proyectos/tictactoe" component={TicTacToe} />
