@@ -22,6 +22,7 @@ import ExcuseGenerator from './views/projects/exercises/excusegenerator';
 import DomainNameGenerator from './views/projects/exercises/domainnamegenerator';
 import RandomCard from './views/projects/exercises/randomcard';
 import StarWars from './views/projects/web/starwars';
+import BubbleSortCards from './views/projects/exercises/bubblesortcards';
 
 const App = props => {
   return (
@@ -37,6 +38,7 @@ const App = props => {
             <Route exact path="/proyectos/generador_excusas" component={ExcuseGenerator} />
             <Route exact path="/proyectos/generador_nombres_dominio" component={DomainNameGenerator} />
             <Route exact path="/proyectos/carta_aleatoria" component={RandomCard} />
+            <Route exact path="/proyectos/ordenador_cartas" component={BubbleSortCards} />
             <Route exact path="/proyectos/contadorsimple" component={SimpleCounter} />
             <Route exact path="/proyectos/listadecontactos" component={ContactList} />
             <Route exact path="/proyectos/tictactoe" component={TicTacToe} />

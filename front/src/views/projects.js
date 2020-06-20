@@ -13,6 +13,7 @@ const Projects = props => {
                 <li><Link to="/proyectos/generador_excusas">Generador de Excusas</Link></li>
                 <li><Link to="/proyectos/generador_nombres_dominio">Generador de Nombres de Dominio</Link></li>
                 <li><Link to="/proyectos/carta_aleatoria">Carta Aleatoria</Link></li>
+                <li><Link to="/proyectos/ordenador_cartas">Ordenador de Cartas</Link></li>
                 <li><Link to="/proyectos/contadorsimple">Contador Simple</Link></li>
                 <li><Link to="/proyectos/listadecontactos">Contador Simple</Link></li>
                 <li><Link to="/proyectos/tictactoe">Tic Tac Toe</Link></li>
