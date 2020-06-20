@@ -24,6 +24,7 @@ import RandomCard from './views/projects/exercises/randomcard';
 import StarWars from './views/projects/web/starwars';
 import BubbleSortCards from './views/projects/exercises/bubblesortcards';
 import MusicPlayer from './views/projects/exercises/musicplayer';
+import TodoList from './views/projects/exercises/todolist';
 
 const App = props => {
   return (
@@ -45,6 +46,7 @@ const App = props => {
             <Route exact path="/proyectos/tictactoe" component={TicTacToe} />
             <Route exact path="/proyectos/semaforo" component={TrafficLight} />
             <Route exact path="/proyectos/reproductor_musica" component={MusicPlayer} />
+            <Route exact path="/proyectos/lista_tareas" component={TodoList} />
             <Route exact path="/proyectos/smbarber" component={SMBarber} />
             <Route exact path="/proyectos/rapinmi" component={Rapinmi} />
             <Route exact path="/proyectos/starwars" component={StarWars} />

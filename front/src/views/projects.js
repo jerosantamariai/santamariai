@@ -15,10 +15,11 @@ const Projects = props => {
                 <li><Link to="/proyectos/carta_aleatoria">Carta Aleatoria</Link></li>
                 <li><Link to="/proyectos/ordenador_cartas">Ordenador de Cartas</Link></li>
                 <li><Link to="/proyectos/contadorsimple">Contador Simple</Link></li>
-                <li><Link to="/proyectos/listadecontactos">Contador Simple</Link></li>
+                <li><Link to="/proyectos/listadecontactos">List de Contactos</Link></li>
                 <li><Link to="/proyectos/tictactoe">Tic Tac Toe</Link></li>
                 <li><Link to="/proyectos/semaforo">Semaforo</Link></li>
                 <li><Link to="/proyectos/reproductor_musica">Reproductor de Música</Link></li>
+                <li><Link to="/proyectos/lista_tareas">Lista de Tareas</Link></li>
             </ul>
             <hr />
             <h2>Paginas Web</h2>
