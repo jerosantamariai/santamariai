@@ -18,6 +18,7 @@ const Projects = props => {
                 <li><Link to="/proyectos/listadecontactos">Contador Simple</Link></li>
                 <li><Link to="/proyectos/tictactoe">Tic Tac Toe</Link></li>
                 <li><Link to="/proyectos/semaforo">Semaforo</Link></li>
+                <li><Link to="/proyectos/reproductor_musica">Reproductor de Música</Link></li>
             </ul>
             <hr />
             <h2>Paginas Web</h2>
