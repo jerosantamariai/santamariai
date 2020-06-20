@@ -23,6 +23,7 @@ const Projects = props => {
             <ul>
                 <li><Link to="/proyectos/smbarber">SMBarber</Link></li>
                 <li><Link to="/proyectos/rapinmi">Rapinmi</Link></li>
+                <li><Link to="/proyectos/starwars">Star Wars</Link></li>
             </ul>
         </>
     );

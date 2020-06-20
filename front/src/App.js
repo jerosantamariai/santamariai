@@ -21,6 +21,7 @@ import Form from './views/projects/exercises/form';
 import ExcuseGenerator from './views/projects/exercises/excusegenerator';
 import DomainNameGenerator from './views/projects/exercises/domainnamegenerator';
 import RandomCard from './views/projects/exercises/randomcard';
+import StarWars from './views/projects/web/starwars';
 
 const App = props => {
   return (
@@ -42,6 +43,7 @@ const App = props => {
             <Route exact path="/proyectos/semaforo" component={TrafficLight} />
             <Route exact path="/proyectos/smbarber" component={SMBarber} />
             <Route exact path="/proyectos/rapinmi" component={Rapinmi} />
+            <Route exact path="/proyectos/starwars" component={StarWars} />
             <Route exact path="/miperfil" component={Perfil} />
             <Route exact path="/icom" component={Icom} />
             <Route exact path="/fstack" component={Fstack} />
