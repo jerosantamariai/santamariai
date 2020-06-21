@@ -56,6 +56,9 @@ const Footer = props => {
                                 <a className="stdbtn" href="http://www.linkedin.com" target="_blank">
                                     <i className="fab fa-linkedin-in fa-lg white-text mr-5"> </i>
                                 </a>
+                                <a className="stdbtn" href="http://www.github.com" target="_blank">
+                                    <i className="fab fa-github fa-lg white-text mr-5"> </i>
+                                </a>
                                 <a className="stdbtn" href="http://www.instagram.com" target="_blank">
                                     <i className="fab fa-instagram fa-lg white-text mr-5"> </i>
                                 </a>
