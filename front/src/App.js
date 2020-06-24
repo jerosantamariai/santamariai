@@ -18,7 +18,7 @@ import TrafficLight from './views/projects/exercises/trafficlight';
 import PostCard from './views/projects/exercises/postcard/postcard';
 import InstagramIndex from './views/projects/exercises/instagram/instagramindex';
 import InstagramFeed from './views/projects/exercises/instagram/instagramfeed';
-import Form from './views/projects/exercises/form';
+import Form from './views/projects/exercises/form/form';
 import ExcuseGenerator from './views/projects/exercises/excusegenerator';
 import DomainNameGenerator from './views/projects/exercises/domainnamegenerator';
 import RandomCard from './views/projects/exercises/randomcard';
