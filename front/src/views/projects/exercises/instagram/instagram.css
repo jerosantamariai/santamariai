@@ -1,3 +1,7 @@
+.instagram {
+    margin-bottom: 100px;
+}
+
 .instagram img{
     height: 200px;
     width: 100%;
@@ -6,93 +10,92 @@
 
 }
 
-.bodyheader{
-    height: 80px;
-    
+.instagram .bodyheader{
+    height: 80px;    
 }
-.title{
-    
+
+.instagram .title{
     background-color: white;
     text-align: center;
     padding: 10px 50px;
 }
 
-.border{
+.instagram .border{
     height: 2050px;
     width: 350px;
     margin: 0px auto;
 }
 
-.border .post{
+.instagram .border .post{
     margin: 0px auto;
     padding: 10px;
     border: 1px solid;
     background-color: white;
 }
 
-.border .header{
+.instagram .border .header{
     height: 8%;
     display: block;
 }
 
-.border .header .left{
+.instagram .border .header .left{
     float: left;
 }
-.border .header .left i{
+
+.instagram .border .header .left i{
     float: left;   
     margin: 4px;
     margin-left: 6px;
 }
 
-.border .header .left span{
+.instagram .border .header .left span{
     float: left;
     font-size: 12px;
     display: list-item;
     margin: 5px;
 }
 
-.border .header .right{
+.instagram .border .header .right{
     float: right;
 }
 
-.border .header .right i{
+.instagram .border .header .right i{
     font-size: 20px;
     margin-top: 10px;
     margin-right: 10px;
 }
 
-.border .image{
+.instagram .border .image{
     height: 50%;
 }
 
-.border .image img{
+.instagram .border .image img{
     height: 250px;
     width: 100%;
     object-fit: cover;
     padding-top: 0px;
 }
 
-.border .inter {
+.instagram .border .inter {
     height: 8%;
     display: block;
 }
 
-.border .inter .left {
+.instagram .border .inter .left {
     float: left;
     margin-top: 10px;
 }
 
-.border .inter .right {
+.instagram .border .inter .right {
     float: right;
     margin-top: 10px;
 }
 
-
-.border .comments{
+.instagram .border .comments{
     height: 10%;
 }
 
-.border .comments p{
+.instagram .border .comments p{
     font-size: 12px;
     text-justify: auto;
     padding: 2px;

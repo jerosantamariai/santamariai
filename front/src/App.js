@@ -15,8 +15,9 @@ import SMBarber from './views/projects/web/smbarber';
 import Rapinmi from './views/projects/web/rapinmi';
 import TicTacToe from './views/projects/exercises/tictactoe';
 import TrafficLight from './views/projects/exercises/trafficlight';
-import PostCard from './views/projects/exercises/postcard';
-import Instagram from './views/projects/exercises/instagram';
+import PostCard from './views/projects/exercises/postcard/postcard';
+import InstagramIndex from './views/projects/exercises/instagram/instagramindex';
+import InstagramFeed from './views/projects/exercises/instagram/instagramfeed';
 import Form from './views/projects/exercises/form';
 import ExcuseGenerator from './views/projects/exercises/excusegenerator';
 import DomainNameGenerator from './views/projects/exercises/domainnamegenerator';
@@ -25,6 +26,8 @@ import StarWars from './views/projects/web/starwars';
 import BubbleSortCards from './views/projects/exercises/bubblesortcards';
 import MusicPlayer from './views/projects/exercises/musicplayer';
 import TodoList from './views/projects/exercises/todolist';
+
+
 
 const App = props => {
   return (
@@ -35,7 +38,8 @@ const App = props => {
           <Switch>
             <Route exact path="/proyectos" component={Projects} />
             <Route exact path="/proyectos/postal" component={PostCard} />
-            <Route exact path="/proyectos/instagram" component={Instagram} />
+            <Route exact path="/proyectos/instagramindex" component={InstagramIndex} />
+            <Route exact path="/proyectos/instagramfeed" component={InstagramFeed} />
             <Route exact path="/proyectos/formulario" component={Form} />
             <Route exact path="/proyectos/generador_excusas" component={ExcuseGenerator} />
             <Route exact path="/proyectos/generador_nombres_dominio" component={DomainNameGenerator} />

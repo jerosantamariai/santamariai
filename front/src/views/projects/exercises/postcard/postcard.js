@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../secondary-styles/postcard.css';
+import '../postcard/postcard.css';
 import { Link } from 'react-router-dom';
 
 const PostCard = props => {
@@ -9,7 +9,7 @@ const PostCard = props => {
                 <h1>Postal</h1>
                 <Link to="/proyectos"><div type="btn" className="btn btn-warning">Volver a Proyectos</div></Link>
             </div>
-            <div className="postcard">
+            <div className="instagram-border">
                 <div className="header">
                     <h1>
                         My Postcard

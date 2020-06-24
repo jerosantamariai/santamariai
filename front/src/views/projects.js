@@ -8,7 +8,7 @@ const Projects = props => {
             <h2>Ejercicios</h2>
             <ul>
                 <li><Link to="/proyectos/postal">Postal Simple</Link></li>
-                <li><Link to="/proyectos/instagram">Instagram</Link></li>
+                <li><Link to="/proyectos/instagramindex">Instagram</Link></li>
                 <li><Link to="/proyectos/formulario">Formulario</Link></li>
                 <li><Link to="/proyectos/generador_excusas">Generador de Excusas</Link></li>
                 <li><Link to="/proyectos/generador_nombres_dominio">Generador de Nombres de Dominio</Link></li>

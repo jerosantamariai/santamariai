@@ -1,26 +1,26 @@
-.postcard-body{
-    background-color: black !important;
+body{
+    background-color: black;
     
 }
 
-.postcard{
+.instagram-border{
     background-color: white;
-    height: 300px;
+    height: 320px;
     width: 500px;
-    border: black 50px solid;
+    border: black 5px solid;
     display: block;
     margin: 50px auto;
     padding-top: 20px;
     padding-bottom: 100px;
 }
 
-.postcard .header {
+.instagram-border .header {
     height: 70px;
     padding-top: 2px;
     padding-left: 15px;
 }
 
-.postcard .header img{
+.instagram-border .header img{
     float: right;
     width: 60px;
     height: 60px;
@@ -28,47 +28,46 @@
     margin-top:-70px;
 }
 
-.postcard .center {
+.instagram-border .center {
     height: 180px;
 }
 
-.postcard .center .left{
+.instagram-border .center .left{
     width: 250px;
     height: 100%;
     padding-left: 15px;
 }
 
-.postcard .center .right{
+.instagram-border .center .right{
     width: 250;
     height: 100%;
     margin-top: -180px;
     margin-left: -100px;
     float: right;
-    
 }
 
-.postcard .center .right table{
-    margin: -20px 40px;
+.instagram-border .center .right table{
+    margin: 10px 20px;
     border-spacing: 20px;
     border-bottom: gray;
-    
     width: 200px;
-
 }
 
-th, td {
-    
+.instagram-border th, td { 
     border-bottom: 1px solid black;
     padding: 5px 0px 5px 0px;
   }
 
-i{
-    margin-left: 60px;
+.instagram-border i{
+    float: right;
     color: rgb(0, 144, 198);
 }
-.postcard .bottom {
+
+.instagram-border .bottom {
     width: 500px;
 }
-.postcard .bottom button{
+
+.instagram-border .bottom button{
     margin-left: 200px;
+    margin-bottom: 20px;
 }

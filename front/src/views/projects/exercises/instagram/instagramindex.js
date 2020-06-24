@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "../../../secondary-styles/instagram.css";
+import "../instagram/instagram.css";
 
-const Instagram = props => {
+const InstagramIndex = props => {
     return (
         <>
             <div className="subbar d-flex justify-content-between my-2 mx-5">
@@ -63,11 +63,11 @@ const Instagram = props => {
                     <div class="col">
                         <ul class="nav justify-content-center">
                             <li class="nav-item p-2">
-                                <a class="nav-link active fas fas fa-th" href="#"></a>
+                                <a class="nav-link active fas fas fa-th disabled" href="#"></a>
                             </li>
                             <li class="nav-item p-2">
-                                <a class="nav-link fas fa-square"
-                                    href="./feed.html"></a>
+                                <Link class="nav-link fas fa-square"
+                                    to="/proyectos/instagramfeed"></Link>
                             </li>
                         </ul>
                     </div>
@@ -209,4 +209,4 @@ const Instagram = props => {
     );
 }
 
-export default Instagram;
+export default InstagramIndex;
