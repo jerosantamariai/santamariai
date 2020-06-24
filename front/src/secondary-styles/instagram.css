@@ -1,0 +1,100 @@
+.instagram img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    padding-top: 0px;
+
+}
+
+.bodyheader{
+    height: 80px;
+    
+}
+.title{
+    
+    background-color: white;
+    text-align: center;
+    padding: 10px 50px;
+}
+
+.border{
+    height: 2050px;
+    width: 350px;
+    margin: 0px auto;
+}
+
+.border .post{
+    margin: 0px auto;
+    padding: 10px;
+    border: 1px solid;
+    background-color: white;
+}
+
+.border .header{
+    height: 8%;
+    display: block;
+}
+
+.border .header .left{
+    float: left;
+}
+.border .header .left i{
+    float: left;   
+    margin: 4px;
+    margin-left: 6px;
+}
+
+.border .header .left span{
+    float: left;
+    font-size: 12px;
+    display: list-item;
+    margin: 5px;
+}
+
+.border .header .right{
+    float: right;
+}
+
+.border .header .right i{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.border .image{
+    height: 50%;
+}
+
+.border .image img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    padding-top: 0px;
+}
+
+.border .inter {
+    height: 8%;
+    display: block;
+}
+
+.border .inter .left {
+    float: left;
+    margin-top: 10px;
+}
+
+.border .inter .right {
+    float: right;
+    margin-top: 10px;
+}
+
+
+.border .comments{
+    height: 10%;
+}
+
+.border .comments p{
+    font-size: 12px;
+    text-justify: auto;
+    padding: 2px;
+}
+

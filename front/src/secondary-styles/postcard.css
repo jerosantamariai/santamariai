@@ -3,7 +3,7 @@
     
 }
 
-.border{
+.postcard{
     background-color: white;
     height: 300px;
     width: 500px;
@@ -14,13 +14,13 @@
     padding-bottom: 100px;
 }
 
-.border .header {
+.postcard .header {
     height: 70px;
     padding-top: 2px;
     padding-left: 15px;
 }
 
-.border .header img{
+.postcard .header img{
     float: right;
     width: 60px;
     height: 60px;
@@ -28,17 +28,17 @@
     margin-top:-70px;
 }
 
-.border .center {
+.postcard .center {
     height: 180px;
 }
 
-.border .center .left{
+.postcard .center .left{
     width: 250px;
     height: 100%;
     padding-left: 15px;
 }
 
-.border .center .right{
+.postcard .center .right{
     width: 250;
     height: 100%;
     margin-top: -180px;
@@ -47,7 +47,7 @@
     
 }
 
-.border .center .right table{
+.postcard .center .right table{
     margin: -20px 40px;
     border-spacing: 20px;
     border-bottom: gray;
@@ -66,9 +66,9 @@ i{
     margin-left: 60px;
     color: rgb(0, 144, 198);
 }
-.border .bottom {
+.postcard .bottom {
     width: 500px;
 }
-.border .bottom button{
+.postcard .bottom button{
     margin-left: 200px;
 }

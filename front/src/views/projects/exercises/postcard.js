@@ -9,7 +9,7 @@ const PostCard = props => {
                 <h1>Postal</h1>
                 <Link to="/proyectos"><div type="btn" className="btn btn-warning">Volver a Proyectos</div></Link>
             </div>
-            <div className="border">
+            <div className="postcard">
                 <div className="header">
                     <h1>
                         My Postcard
