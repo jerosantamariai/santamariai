@@ -1,5 +1,5 @@
-body{
-    background-color: black;
+.postcard-body{
+    background-color: black !important;
     
 }
 
@@ -7,9 +7,11 @@ body{
     background-color: white;
     height: 300px;
     width: 500px;
-    border: black 2px solid;
+    border: black 50px solid;
     display: block;
     margin: 50px auto;
+    padding-top: 20px;
+    padding-bottom: 100px;
 }
 
 .border .header {
