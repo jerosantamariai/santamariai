@@ -21,7 +21,7 @@ import InstagramFeed from './views/projects/exercises/instagram/instagramfeed';
 import Form from './views/projects/exercises/form/form';
 import ExcuseGenerator from './views/projects/exercises/excusegenerator';
 import DomainNameGenerator from './views/projects/exercises/domainnamegenerator';
-import RandomCard from './views/projects/exercises/randomcard';
+import RandomCard from './views/projects/exercises/randomcard/randomcard';
 import StarWars from './views/projects/web/starwars';
 import BubbleSortCards from './views/projects/exercises/bubblesortcards';
 import MusicPlayer from './views/projects/exercises/musicplayer';
