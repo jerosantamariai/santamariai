@@ -105,6 +105,75 @@ def register():
 
     return jsonify(data), 201
 
+@app.route('/users', methods=['GET', 'POST'])
+@app.route('/users/<int:id>', methods=['GET', 'PUT', 'DELETE'])
+# @jwt_required
+def users(id = None):
+    if request.method == 'GET':
+        if id is not None:
+            user = Users.query.get(id)
+            if user:
+                return jsonify(user.serialize()), 200
+            else:
+                return jsonify({"msg": "Username not exist"}), 404
+        else:
+            users = Users.query.all()
+            users = list(map(lambda user: user.serialize(), users))
+            return jsonify(users), 200
+
+    if request.method == 'POST':
+        name = request.json.get('name', None)
+        lastname = request.json.get('lastname', None)
+        phone = request.json.get('phone', None)
+        email = request.json.get('email', None)
+        
+        users = Users()
+        
+        users.name = name 
+        users.lastname = lastname 
+        users.phone = phone
+        users.email = email
+        
+        db.session.add(users) 
+        db.session.commit()  
+
+        return jsonify(users.serialize()), 201
+    
+    if request.method == 'PUT':
+        name = request.json.get('name', None)
+        lastname = request.json.get('lastname', None)
+        phone = request.json.get('phone', None)
+        email = request.json.get('email', None)
+
+        if not name or name == "":
+            return jsonify({"msg":"Insert your name"}), 400
+        if not lastname or lastname == "":
+            return jsonify({"msg":"Insert your lastname"}), 400
+        if not phone or phone == "":
+            return jsonify({"msg":"Insert your phone"}), 400
+        if not email or email == "":
+            return jsonify({"msg":"Confirm your email"}), 400
+
+        users = Users.query.get(id)
+        if not users:
+            return jsonify({"msg": "Not Found"}), 404
+         
+        users.name = name 
+        users.lastname = lastname 
+        users.phone = phone
+        users.email = email
+        
+        db.session.commit()  
+
+        return jsonify(users.serialize()), 201
+
+    if request.method == 'DELETE':
+        users = Users.query.get(id)
+        if not blog:
+            return jsonify({"msg": "User not found"}), 404
+        db.session.delete(users)
+        db.session.commit()
+        return jsonify({"msg":"You delete the User"}), 200
 
 
 if __name__ == '__main__':
