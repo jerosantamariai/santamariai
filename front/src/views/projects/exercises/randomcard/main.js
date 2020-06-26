@@ -4,8 +4,8 @@ let colour = ["spade", "cubs", "hearts", "diamonds"];
 let rnd1 = Math.floor(Math.random() * crdnum.length);
 let rnd2 = Math.floor(Math.random() * colour.length);
 
-document.querySelector(".cardcontent").innerHTML = card(crdnum[rnd1]);
-document.querySelector(".cardcontent").classList.add(colour[rnd2]);
+// document.querySelector(".cardcontent").innerHTML = card(crdnum[rnd1]);
+// document.querySelector(".cardcontent").classList.add(colour[rnd2]);
 
 function card(num) {
     switch (num) {

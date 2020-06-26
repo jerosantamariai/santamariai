@@ -4,7 +4,7 @@ from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 from flask_bcrypt import Bcrypt
 from flask_cors import CORS
-from models import db
+from models import db, Roles, Users, Fsblog
 from flask_mail import Mail, Message
 from werkzeug.utils import secure_filename
 from functions import allowed_file
@@ -104,6 +104,8 @@ def register():
     }
 
     return jsonify(data), 201
+
+
 
 if __name__ == '__main__':
     manager.run()

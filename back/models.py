@@ -37,3 +37,26 @@ class Users (db.Model):
             "createdate": self.createdate,
             "role": self.role.serialize(),
         }
+
+class Fsblog (db.Model):
+    __tablename__ = 'fsblog'
+    id = db.Column(db.Integer, primary_key=True)
+    fstitulo = db.Column(db.String(100), nullable=False)
+    fsvideourl = db.Column(db.String(100), nullable=False)
+    fsvideo = db.Column(db.String(1000), nullable=True)
+    fsdescripcion = db.Column(db.String(100), nullable=False)
+    fssubtitulo = db.Column(db.String(100), nullable=False)
+    fscuerpo = db.Column(db.String(10000), nullable=False)
+    fscode = db.Column(db.String(10000), nullable=True)
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "fstitulo": self.fstitulo,
+            "fsvideourl": self.fsvideourl,
+            "fsvideo": self.fsvideo,
+            "fsdescripcion": self.fsdescripcion,
+            "fssubtitulo": self.fssubtitulo,
+            "fscuerpo": self.fscuerpo,
+            "fscode": self.fscode,
+        }
