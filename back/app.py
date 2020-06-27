@@ -115,7 +115,7 @@ def users(id = None):
             if user:
                 return jsonify(user.serialize()), 200
             else:
-                return jsonify({"msg": "Username not exist"}), 404
+                return jsonify({"msg": "Usuario no encontrado :("}), 404
         else:
             users = Users.query.all()
             users = list(map(lambda user: user.serialize(), users))
@@ -146,17 +146,17 @@ def users(id = None):
         email = request.json.get('email', None)
 
         if not name or name == "":
-            return jsonify({"msg":"Insert your name"}), 400
+            return jsonify({"msg":"Ingresa tu nombre!"}), 400
         if not lastname or lastname == "":
-            return jsonify({"msg":"Insert your lastname"}), 400
+            return jsonify({"msg":"Ingresa tu apellido!"}), 400
         if not phone or phone == "":
-            return jsonify({"msg":"Insert your phone"}), 400
+            return jsonify({"msg":"Ingresa tu telefono!"}), 400
         if not email or email == "":
-            return jsonify({"msg":"Confirm your email"}), 400
+            return jsonify({"msg":"Confirma tu email!"}), 400
 
         users = Users.query.get(id)
         if not users:
-            return jsonify({"msg": "Not Found"}), 404
+            return jsonify({"msg": "No encontrado"}), 404
          
         users.name = name 
         users.lastname = lastname 
@@ -170,22 +170,22 @@ def users(id = None):
     if request.method == 'DELETE':
         users = Users.query.get(id)
         if not users:
-            return jsonify({"msg": "User not found"}), 404
+            return jsonify({"msg": "Usuario no encontrado"}), 404
         db.session.delete(users)
         db.session.commit()
-        return jsonify({"msg":"You delete the User"}), 200
+        return jsonify({"msg":"Usuario borrado!"}), 200
 
-@app.route('/users', methods=['GET', 'POST'])
-@app.route('/users/<int:id>', methods=['GET', 'PUT', 'DELETE'])
+@app.route('/fsblog', methods=['GET', 'POST'])
+@app.route('/fsblog/<int:id>', methods=['GET', 'PUT', 'DELETE'])
 # @jwt_required
-def users(id = None):
+def fsblog(id = None):
     if request.method == 'GET':
         if id is not None:
-            user = Users.query.get(id)
-            if user:
-                return jsonify(user.serialize()), 200
+            fsblog = Fsblog.query.get(id)
+            if fsblog:
+                return jsonify(fsblog.serialize()), 200
             else:
-                return jsonify({"msg": "Username not exist"}), 404
+                return jsonify({"msg": "Full Stack Blog no encontrado"}), 404
         else:
             users = Users.query.all()
             users = list(map(lambda user: user.serialize(), users))
@@ -259,7 +259,7 @@ def loadroles():
     db.session.add(role)
     db.session.commit()
 
-    print("The rolls are made it")
+    print("Roles creados")
 
 @manager.command
 def loadadmin():
@@ -271,7 +271,7 @@ def loadadmin():
     db.session.add(users)
     db.session.commit()
 
-    print("Administrador is made!")
+    print("Hola Jero! Volviste! Buena suerte programando!")
 
 
 if __name__ == '__main__':
