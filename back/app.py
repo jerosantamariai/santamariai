@@ -20,7 +20,8 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 app.config['DEBUG '] = True
 app.config['ENV'] = 'development'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:02155120@localhost:3306/db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = 'super-secret'  # Change this!
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -75,19 +76,19 @@ def login():
 @app.route('/register', methods=['POST'])
 def register():
     if not request.is_json:
-        return jsonify({"msg": "Invalid format"}), 400
+        return jsonify({"msg": "Formato invalido!"}), 400
 
     email = request.json.get('email', None)
     password = request.json.get('password', None)
 
     if not email or email == '':
-        return jsonify({"msg": "ERROR: Enter correct mail"}), 400
+        return jsonify({"msg": "Ingresa un correo valido!"}), 400
     if not password or password == '':
-        return jsonify({"msg": "ERROR: Enter correct password"}), 400
+        return jsonify({"msg": "Ingresa un password!"}), 400
 
     users = Users.query.filter_by(email=email).first()
     if users:
-        return jsonify({"msg": "ERROR: Username all ready exist"}), 400
+        return jsonify({"msg": "Usuario ya existe!"}), 400
 
     users = Users()
     users.email = email
