@@ -20,7 +20,7 @@ const injectContext = PassedComponent => {
         }
 
         componentDidMount() {
-            
+            this.state.actions.getFsBlogs('http://localhost:5000/fsblog');
         }
 
         render() {
