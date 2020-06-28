@@ -42,7 +42,7 @@ class Fsblog (db.Model):
     __tablename__ = 'fsblog'
     id = db.Column(db.Integer, primary_key=True)
     fstitulo = db.Column(db.String(100), nullable=False)
-    fsvideourl = db.Column(db.String(100), nullable=False)
+    fsurl = db.Column(db.String(100), nullable=False)
     fsvideo = db.Column(db.String(1000), nullable=True)
     fsdescripcion = db.Column(db.String(100), nullable=False)
     fssubtitulo = db.Column(db.String(100), nullable=False)
@@ -53,7 +53,7 @@ class Fsblog (db.Model):
         return {
             "id": self.id,
             "fstitulo": self.fstitulo,
-            "fsvideourl": self.fsvideourl,
+            "fsurl": self.fsurl,
             "fsvideo": self.fsvideo,
             "fsdescripcion": self.fsdescripcion,
             "fssubtitulo": self.fssubtitulo,

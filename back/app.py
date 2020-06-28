@@ -20,8 +20,8 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 app.config['DEBUG '] = True
 app.config['ENV'] = 'development'
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:02155120@localhost:3306/db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost:3306/db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = 'super-secret'  # Change this!
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -188,63 +188,66 @@ def fsblog(id = None):
             else:
                 return jsonify({"msg": "Full Stack Blog no encontrado"}), 404
         else:
-            users = Users.query.all()
-            users = list(map(lambda user: user.serialize(), users))
-            return jsonify(users), 200
+            fsblogs = Fsblog.query.all()
+            fsblogs = list(map(lambda fsblog: fsblog.serialize(), fsblogs))
+            return jsonify(fsblogs), 200
 
     if request.method == 'POST':
-        name = request.json.get('name', None)
-        lastname = request.json.get('lastname', None)
-        phone = request.json.get('phone', None)
-        email = request.json.get('email', None)
+        fstitulo = request.json.get('fstitulo', None)
+        fsurl = request.json.get('fsurl', None)
+        fsvideo = request.json.get('fsvideo', None)
+        fsdescripcion = request.json.get('fsdescripcion', None)
+        fssubtitulo = request.json.get('fssubtitulo', None)
+        fscuerpo = request.json.get('fscuerpo', None)
+        fscode = request.json.get('fscode', None)
         
-        users = Users()
+        fsblog = Fsblog()
         
-        users.name = name 
-        users.lastname = lastname 
-        users.phone = phone
-        users.email = email
+        fsblog.fstitulo = fstitulo
+        fsblog.fsurl = fsurl
+        fsblog.fsvideo = fsvideo
+        fsblog.fsdescripcion = fsdescripcion
+        fsblog.fssubtitulo = fssubtitulo
+        fsblog.fscuerpo = fscuerpo
+        fsblog.fscode = fscode
         
-        db.session.add(users) 
+        db.session.add(fsblog) 
         db.session.commit()  
 
-        return jsonify(users.serialize()), 201
+        return jsonify(fsblog.serialize()), 201
     
     if request.method == 'PUT':
-        name = request.json.get('name', None)
-        lastname = request.json.get('lastname', None)
-        phone = request.json.get('phone', None)
-        email = request.json.get('email', None)
+        fstitulo = request.json.get('fstitulo', None)
+        fsurl = request.json.get('fsurl', None)
+        fsvideo = request.json.get('fsvideo', None)
+        fsdescripcion = request.json.get('fsdescripcion', None)
+        fssubtitulo = request.json.get('fssubtitulo', None)
+        fscuerpo = request.json.get('fscuerpo', None)
+        fscode = request.json.get('fscode', None)
 
-        if not name or name == "":
-            return jsonify({"msg":"Insert your name"}), 400
-        if not lastname or lastname == "":
-            return jsonify({"msg":"Insert your lastname"}), 400
-        if not phone or phone == "":
-            return jsonify({"msg":"Insert your phone"}), 400
-        if not email or email == "":
-            return jsonify({"msg":"Confirm your email"}), 400
-
-        users = Users.query.get(id)
-        if not users:
-            return jsonify({"msg": "Not Found"}), 404
+        fsblog = Fsblog.query.get(id)
+        if not fsblog:
+            return jsonify({"msg": "Blog no encontrado"}), 404
          
-        users.name = name 
-        users.lastname = lastname 
-        users.phone = phone
-        users.email = email
+        fsblog.fstitulo = fstitulo
+        fsblog.fsurl = fsurl
+        fsblog.fsvideo = fsvideo
+        fsblog.fsdescripcion = fsdescripcion
+        fsblog.fssubtitulo = fssubtitulo
+        fsblog.fscuerpo = fscuerpo
+        fsblog.fscode = fscode
         
         db.session.commit()  
 
-        return jsonify(users.serialize()), 201
+        return jsonify(fsblog.serialize()), 201
 
     if request.method == 'DELETE':
-        users = Users.query.get(id)
-        if not blog:
-            return jsonify({"msg": "User not found"}), 404
-        db.session.delete(users)
+        fsblog = Fsblog.query.get(id)
+        if not fsblog:
+            return jsonify({"msg": "Blog no encontrado"}), 404
+        db.session.delete(fsblog)
         db.session.commit()
-        return jsonify({"msg":"You delete the User"}), 200
+        return jsonify({"msg":"Blog borrado!"}), 200
 
 @manager.command
 def loadroles():
