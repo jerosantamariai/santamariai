@@ -9,13 +9,13 @@ const Fstack = props => {
             <h1>Full Stack</h1>
             <div className="blog-container">
                 <div className="row">
-                    <div className="card-group">
+                    <div className="card-deck justify-content-center">
                         {
                             !!store.fsblog ?
                                 store.fsblog.map((fsblo, i) => {
                                     return (
-                                        <div className="col-lg-3 col-md-4 col-xs-12 justify-content-center">
-                                            <div className="card blogcard" key={i}>
+                                        <div className="col-lg-3 col-md-4 col-xs-12">
+                                            <div className="card h-100 mb-2 blogcard" key={i}>
                                                 <Link type="button" className="btn btn-light" to={"/fstack/" + fsblo.fsurl}>
                                                     <img src={fsblo.fsfoto} className="card-img-top my-2" alt={"image of " + fsblo.fstitulo} />
                                                     <div className="card-body">

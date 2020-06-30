@@ -4,7 +4,7 @@
     width: 100%;
 }
 
-.card{
+.randomcardbody .card{
     background-color: white;
     width: 200px;
     height: 300px;
@@ -12,14 +12,14 @@
     border-radius: 25px;
 }
 
-.card .cardcontent{
+.randomcardbody .card .cardcontent{
     position: relative;
     font-size: 60px;
     text-align: center;
     padding-top: 105px;
 }
 
-.card .spade::before {
+.randomcardbody .card .spade::before {
     content: '\2660';
     position: absolute;
     display: inline-block;
@@ -28,7 +28,7 @@
     margin-top: -95px;
 }
 
-.card .spade::after {
+.randomcardbody .card .spade::after {
     content: '\2660';
     position: absolute;
     display: inline-block;
@@ -42,7 +42,7 @@
     margin-top: 120px;
 }
 
-.card .cubs::before {
+.randomcardbody .card .cubs::before {
     content: '\2663';
     position: absolute;
     display: inline-block;
@@ -51,7 +51,7 @@
     margin-top: -95px;
 }
 
-.card .cubs::after {
+.randomcardbody .card .cubs::after {
     content: '\2663';
     position: absolute;
     display: inline-block;
@@ -65,7 +65,7 @@
     margin-top: 120px;
 }
 
-.card .hearts::before {
+.randomcardbody .card .hearts::before {
     content: '\2665';
     position: absolute;
     display: inline-block;
@@ -74,7 +74,7 @@
     margin-top: -95px;
 }
 
-.card .hearts::after {
+.randomcardbody .card .hearts::after {
     content: '\2665';
     position: absolute;
     display: inline-block;
@@ -88,7 +88,7 @@
     margin-top: 120px;
 }
 
-.card .diamonds::before {
+.randomcardbody .card .diamonds::before {
     content: '\2666';
     position: absolute;
     display: inline-block;
@@ -97,7 +97,7 @@
     margin-top: -95px;
 }
 
-.card .diamonds::after {
+.randomcardbody .card .diamonds::after {
     content: '\2666';
     position: absolute;
     display: inline-block;
