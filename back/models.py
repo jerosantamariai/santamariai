@@ -64,3 +64,30 @@ class Fsblog (db.Model):
             "fscode": self.fscode,
             "fscreatedate": self.fscreatedate,
         }
+
+class Icomblog (db.Model):
+    __tablename__ = 'icomblog'
+    id = db.Column(db.Integer, primary_key=True)
+    icomtitulo = db.Column(db.String(100), nullable=False)
+    icomurl = db.Column(db.String(100), nullable=False)
+    icomvideo = db.Column(db.String(1000), nullable=True)
+    icomfoto = db.Column(db.String(1000), nullable=True)
+    icomdescripcion = db.Column(db.String(100), nullable=False)
+    icomsubtitulo = db.Column(db.String(100), nullable=False)
+    icomcuerpo = db.Column(db.String(10000), nullable=False)
+    icomcode = db.Column(db.String(10000), nullable=True)
+    icomcreatedate = db.Column(db.DateTime, default=datetime.now())
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "icomtitulo": self.icomtitulo,
+            "icomurl": self.icomurl,
+            "icomvideo": self.icomvideo,
+            "icomfoto": self.icomfoto,
+            "icomdescripcion": self.icomdescripcion,
+            "icomsubtitulo": self.icomsubtitulo,
+            "icomcuerpo": self.icomcuerpo,
+            "icomcode": self.icomcode,
+            "icomcreatedate": self.icomcreatedate,
+        }
