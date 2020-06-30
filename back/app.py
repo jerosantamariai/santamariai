@@ -290,29 +290,29 @@ def icomblog(id = None):
         return jsonify(icomblog.serialize()), 201
     
     if request.method == 'PUT':
-        fstitulo = request.json.get('fstitulo', None)
-        fsurl = request.json.get('fsurl', None)
-        fsvideo = request.json.get('fsvideo', None)
-        fsdescripcion = request.json.get('fsdescripcion', None)
-        fssubtitulo = request.json.get('fssubtitulo', None)
-        fscuerpo = request.json.get('fscuerpo', None)
-        fscode = request.json.get('fscode', None)
+        icomtitulo = request.json.get('icomtitulo', None)
+        icomurl = request.json.get('icomurl', None)
+        icomvideo = request.json.get('icomvideo', None)
+        icomdescripcion = request.json.get('icomdescripcion', None)
+        icomsubtitulo = request.json.get('icomsubtitulo', None)
+        icomcuerpo = request.json.get('icomcuerpo', None)
+        icomcode = request.json.get('icomcode', None)
 
-        fsblog = Fsblog.query.get(id)
-        if not fsblog:
+        icomblog = Icomblog.query.get(id)
+        if not icomblog:
             return jsonify({"msg": "Blog no encontrado"}), 404
          
-        fsblog.fstitulo = fstitulo
-        fsblog.fsurl = fsurl
-        fsblog.fsvideo = fsvideo
-        fsblog.fsdescripcion = fsdescripcion
-        fsblog.fssubtitulo = fssubtitulo
-        fsblog.fscuerpo = fscuerpo
-        fsblog.fscode = fscode
+        icomblog.icomtitulo = icomtitulo
+        icomblog.icomurl = icomurl
+        icomblog.icomvideo = icomvideo
+        icomblog.icomdescripcion = icomdescripcion
+        icomblog.icomsubtitulo = icomsubtitulo
+        icomblog.icomcuerpo = icomcuerpo
+        icomblog.icomcode = icomcode
         
         db.session.commit()  
 
-        return jsonify(fsblog.serialize()), 201
+        return jsonify(icomblog.serialize()), 201
 
     if request.method == 'DELETE':
         fsblog = Fsblog.query.get(id)
