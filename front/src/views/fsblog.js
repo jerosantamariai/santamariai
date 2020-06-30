@@ -21,13 +21,13 @@ const FsBlog = props => {
                                                 <h2 className="card-title">{fsblo.fstitulo}</h2>
                                                 <iframe width="1200" height="300" src={"https://www.youtube.com/embed/" + fsblo.fsvideo} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                 <div className="col-3 my-auto">
-                                                    <img src="http://placehold.it/300x400" className="card-img-top my-2" alt={"image of " + fsblo.id} />
-                                                    <Link to={"/blogs"} className="btn btn-secondary d-flex justify-content-center blogitem text-white">Back to Blogs!</Link>
+                                                    <img src={fsblo.fsfoto} className="card-img-top my-2" alt={"image of " + fsblo.id} />
+                                                    <Link to={"/fstack"} className="btn btn-secondary d-flex justify-content-center blogitem text-white">&#60;&#60;  Atrás</Link>
                                                 </div>
                                                 <div className="col-9 py-4">
                                                     <h5 className="card-text">{fsblo.fssubtitulo}</h5>
                                                     <p className="card-text">{fsblo.fscuerpo}</p>
-                                                    <p className="card-text">Release Date: algo que un no existe</p>
+                                                    <p className="card-text">Fecha de Creación: {fsblo.fscreatedate}</p>
                                                 </div>
                                             </div>
                                         )
