@@ -275,6 +275,7 @@ def loadfsblog():
     fsblog.fstitulo = "Primer Blog"
     fsblog.fsurl = "Primer_blog"
     fsblog.fsvideo = "Btlnfhh-Gac"
+    fsblog.fsfoto = "https://picsum.photos/300/400"
 
     db.session.add(fsblog)
     db.session.commit()
@@ -287,6 +288,7 @@ def loadfsblog():
     fsblog.fstitulo = "Segundo Blog"
     fsblog.fsurl = "segundo_blog"
     fsblog.fsvideo = "Btlnfhh-Gac"
+    fsblog.fsfoto = "https://picsum.photos/300/400"
 
     db.session.add(fsblog)
     db.session.commit()
@@ -299,6 +301,7 @@ def loadfsblog():
     fsblog.fstitulo = "Tercer Blog"
     fsblog.fsurl = "tercer_blog"
     fsblog.fsvideo = "Btlnfhh-Gac"
+    fsblog.fsfoto = "https://picsum.photos/300/400"
 
     db.session.add(fsblog)
     db.session.commit()
@@ -311,6 +314,7 @@ def loadfsblog():
     fsblog.fstitulo = "Cuarto Blog"
     fsblog.fsurl = "cuarto_blog"
     fsblog.fsvideo = "Btlnfhh-Gac"
+    fsblog.fsfoto = "https://picsum.photos/300/400"
 
     db.session.add(fsblog)
     db.session.commit()
@@ -323,6 +327,7 @@ def loadfsblog():
     fsblog.fstitulo = "Quinto Blog"
     fsblog.fsurl = "quinto_blog"
     fsblog.fsvideo = "Btlnfhh-Gac"
+    fsblog.fsfoto = "https://picsum.photos/300/400"
 
     db.session.add(fsblog)
     db.session.commit()
@@ -335,6 +340,7 @@ def loadfsblog():
     fsblog.fstitulo = "Sexto Blog"
     fsblog.fsurl = "sexto_blog"
     fsblog.fsvideo = "Btlnfhh-Gac"
+    fsblog.fsfoto = "https://picsum.photos/300/400"
 
     db.session.add(fsblog)
     db.session.commit()
@@ -347,6 +353,7 @@ def loadfsblog():
     fsblog.fstitulo = "Septimo Blog"
     fsblog.fsurl = "septimo_blog"
     fsblog.fsvideo = "Btlnfhh-Gac"
+    fsblog.fsfoto = "https://picsum.photos/300/400"
 
     db.session.add(fsblog)
     db.session.commit()

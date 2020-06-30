@@ -44,6 +44,7 @@ class Fsblog (db.Model):
     fstitulo = db.Column(db.String(100), nullable=False)
     fsurl = db.Column(db.String(100), nullable=False)
     fsvideo = db.Column(db.String(1000), nullable=True)
+    fsfoto = db.Column(db.String(1000), nullable=True)
     fsdescripcion = db.Column(db.String(100), nullable=False)
     fssubtitulo = db.Column(db.String(100), nullable=False)
     fscuerpo = db.Column(db.String(10000), nullable=False)
@@ -56,6 +57,7 @@ class Fsblog (db.Model):
             "fstitulo": self.fstitulo,
             "fsurl": self.fsurl,
             "fsvideo": self.fsvideo,
+            "fsfoto": self.fsfoto,
             "fsdescripcion": self.fsdescripcion,
             "fssubtitulo": self.fssubtitulo,
             "fscuerpo": self.fscuerpo,
