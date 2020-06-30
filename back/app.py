@@ -4,7 +4,7 @@ from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 from flask_bcrypt import Bcrypt
 from flask_cors import CORS
-from models import db, Roles, Users, Fsblog
+from models import db, Roles, Users, Fsblog, Icomblog
 from flask_mail import Mail, Message
 from werkzeug.utils import secure_filename
 from functions import allowed_file
@@ -248,6 +248,80 @@ def fsblog(id = None):
         db.session.delete(fsblog)
         db.session.commit()
         return jsonify({"msg":"Blog borrado!"}), 200
+
+@app.route('/icomblog', methods=['GET', 'POST'])
+@app.route('/icomblog/<int:id>', methods=['GET', 'PUT', 'DELETE'])
+# @jwt_required
+def icomblog(id = None):
+    if request.method == 'GET':
+        if id is not None:
+            icomblog = Icomblog.query.get(id)
+            if icomblog:
+                return jsonify(icomblog.serialize()), 200
+            else:
+                return jsonify({"msg": "ICOM Blog no encontrado"}), 404
+        else:
+            icomblogs = Icomblog.query.all()
+            icomblogs = list(map(lambda icomblog: icomblog.serialize(), icomblogs))
+            return jsonify(icomblogs), 200
+
+    if request.method == 'POST':
+        fstitulo = request.json.get('fstitulo', None)
+        fsurl = request.json.get('fsurl', None)
+        fsvideo = request.json.get('fsvideo', None)
+        fsdescripcion = request.json.get('fsdescripcion', None)
+        fssubtitulo = request.json.get('fssubtitulo', None)
+        fscuerpo = request.json.get('fscuerpo', None)
+        fscode = request.json.get('fscode', None)
+        
+        fsblog = Fsblog()
+        
+        fsblog.fstitulo = fstitulo
+        fsblog.fsurl = fsurl
+        fsblog.fsvideo = fsvideo
+        fsblog.fsdescripcion = fsdescripcion
+        fsblog.fssubtitulo = fssubtitulo
+        fsblog.fscuerpo = fscuerpo
+        fsblog.fscode = fscode
+        
+        db.session.add(fsblog) 
+        db.session.commit()  
+
+        return jsonify(fsblog.serialize()), 201
+    
+    if request.method == 'PUT':
+        fstitulo = request.json.get('fstitulo', None)
+        fsurl = request.json.get('fsurl', None)
+        fsvideo = request.json.get('fsvideo', None)
+        fsdescripcion = request.json.get('fsdescripcion', None)
+        fssubtitulo = request.json.get('fssubtitulo', None)
+        fscuerpo = request.json.get('fscuerpo', None)
+        fscode = request.json.get('fscode', None)
+
+        fsblog = Fsblog.query.get(id)
+        if not fsblog:
+            return jsonify({"msg": "Blog no encontrado"}), 404
+         
+        fsblog.fstitulo = fstitulo
+        fsblog.fsurl = fsurl
+        fsblog.fsvideo = fsvideo
+        fsblog.fsdescripcion = fsdescripcion
+        fsblog.fssubtitulo = fssubtitulo
+        fsblog.fscuerpo = fscuerpo
+        fsblog.fscode = fscode
+        
+        db.session.commit()  
+
+        return jsonify(fsblog.serialize()), 201
+
+    if request.method == 'DELETE':
+        fsblog = Fsblog.query.get(id)
+        if not fsblog:
+            return jsonify({"msg": "Blog no encontrado"}), 404
+        db.session.delete(fsblog)
+        db.session.commit()
+        return jsonify({"msg":"Blog borrado!"}), 200
+
 
 @manager.command
 def loadroles():
