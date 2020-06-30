@@ -48,6 +48,7 @@ class Fsblog (db.Model):
     fssubtitulo = db.Column(db.String(100), nullable=False)
     fscuerpo = db.Column(db.String(10000), nullable=False)
     fscode = db.Column(db.String(10000), nullable=True)
+    fscreatedate = db.Column(db.DateTime, default=datetime.now())
 
     def serialize(self):
         return {
@@ -59,4 +60,5 @@ class Fsblog (db.Model):
             "fssubtitulo": self.fssubtitulo,
             "fscuerpo": self.fscuerpo,
             "fscode": self.fscode,
+            "fscreatedate": self.fscreatedate,
         }
