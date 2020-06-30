@@ -315,10 +315,10 @@ def icomblog(id = None):
         return jsonify(icomblog.serialize()), 201
 
     if request.method == 'DELETE':
-        fsblog = Fsblog.query.get(id)
-        if not fsblog:
+        icomblog = Icomblog.query.get(id)
+        if not icomblog:
             return jsonify({"msg": "Blog no encontrado"}), 404
-        db.session.delete(fsblog)
+        db.session.delete(icomblog)
         db.session.commit()
         return jsonify({"msg":"Blog borrado!"}), 200
 
