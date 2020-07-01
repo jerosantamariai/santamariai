@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const IcomBlog = props => {
     const { store, actions } = useContext(Context)
     const blogger = props.match.params.icomurl;
-    return(
+    return (
         <>
             <h1>Hola</h1>
             <div className="blogteiner">
@@ -19,7 +19,9 @@ const IcomBlog = props => {
                                         return (
                                             <div className="row card-group mb-3 d-flex justify-content-center cardbg" key={i}>
                                                 <h2 className="card-title">{icomblo.icomtitulo}</h2>
-                                                <iframe width="1200" height="300" src={"https://www.youtube.com/embed/" + icomblo.icomvideo} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                <div className="iframe-container">
+                                                    <iframe className="responsive-iframe" src={"https://www.youtube.com/embed/" + icomblo.icomvideo} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                </div>
                                                 <div className="col-3 my-auto">
                                                     <img src={icomblo.icomfoto} className="card-img-top my-2" alt={"image of " + icomblo.id} />
                                                     <Link to={"/icomtack"} className="btn btn-secondary d-flex justify-content-center blogitem text-white">&#60;&#60;  Atrás</Link>
