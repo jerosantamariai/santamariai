@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     return {
         store: {
             fsblog: null,
+            icomblog: null,
         },
 
         actions: {
@@ -22,8 +23,25 @@ const getState = ({ getStore, getActions, setStore }) => {
                         console.log(error)
                     })
             },
-        }
 
+            getIcomBlogs: url => {
+                fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                    .then(resp => resp.json())
+                    .then(data => {
+                        setStore({
+                            icomblog: data
+                        })
+                    })
+                    .catch(error => {
+                        console.log(error)
+                    })
+            },
+        }
     }
 }
 

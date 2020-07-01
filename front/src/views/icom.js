@@ -16,7 +16,7 @@ const Icom = props => {
                                     return (
                                         <div className="col-lg-3 col-md-4 col-xs-12">
                                             <div className="card mb-2 blogcard" key={i}>
-                                                <Link type="button" className="btn btn-light" to={"/fstack/" + icomblo.fsurl}>
+                                                <Link type="button" className="btn btn-light" to={"/icom/" + icomblo.icomurl}>
                                                     <img src={icomblo.icomfoto} className="card-img-top my-2" alt={"image of " + icomblo.icomtitulo} />
                                                     <div className="card-body">
                                                         <h5 className="card-title">{icomblo.icomtitulo}</h5>

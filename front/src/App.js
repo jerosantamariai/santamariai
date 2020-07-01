@@ -27,6 +27,7 @@ import BubbleSortCards from './views/projects/exercises/bubblesortcards';
 import MusicPlayer from './views/projects/exercises/musicplayer';
 import TodoList from './views/projects/exercises/todolist';
 import FsBlog from './views/fsblog';
+import IcomBlog from './views/icomblog';
 
 
 
@@ -56,6 +57,7 @@ const App = props => {
             <Route exact path="/proyectos/rapinmi" component={Rapinmi} />
             <Route exact path="/proyectos/starwars" component={StarWars} />
             <Route exact path="/miperfil" component={Perfil} />
+            <Route exact path="/icom/:icomurl" component={IcomBlog} />
             <Route exact path="/icom" component={Icom} />
             <Route exact path="/fstack/:fsurl" component={FsBlog} />
             <Route exact path="/fstack" component={Fstack} />

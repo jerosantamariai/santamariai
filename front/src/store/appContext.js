@@ -21,6 +21,7 @@ const injectContext = PassedComponent => {
 
         componentDidMount() {
             this.state.actions.getFsBlogs('http://localhost:5000/fsblog');
+            this.state.actions.getIcomBlogs('http://localhost:5000/icomblog');
         }
 
         render() {
