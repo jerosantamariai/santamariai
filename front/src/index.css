@@ -33,3 +33,9 @@
   max-height: 50px;
 }
 
+/* BLOG GENERAL */
+
+.blog-container{
+  width: 95%;
+  margin: auto;
+}
