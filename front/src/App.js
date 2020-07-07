@@ -56,7 +56,7 @@ const App = props => {
             <Route exact path="/proyectos/smbarber" component={SMBarber} />
             <Route exact path="/proyectos/rapinmi" component={Rapinmi} />
             <Route exact path="/proyectos/starwars" component={StarWars} />
-            <Route exact path="/miperfil" component={Perfil} />
+            <Route exact path="/conoceme" component={Perfil} />
             <Route exact path="/icom/:icomurl" component={IcomBlog} />
             <Route exact path="/icom" component={Icom} />
             <Route exact path="/fstack/:fsurl" component={FsBlog} />
