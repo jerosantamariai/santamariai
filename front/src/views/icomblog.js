@@ -20,7 +20,7 @@ const IcomBlog = props => {
                                             <div className="row card-group mb-3 d-flex justify-content-center cardbg" key={i}>
                                                 <h2 className="card-title">{icomblo.icomtitulo}</h2>
                                                 <div className="iframe-container">
-                                                    <iframe className="responsive-iframe" src={"https://www.youtube.com/embed/" + icomblo.icomvideo} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                    <iframe width="560" height="315" className="responsive-iframe" src={"https://www.youtube.com/embed/" + icomblo.icomvideo} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                 </div>
                                                 <div className="col-3 my-auto">
                                                     <img src={icomblo.icomfoto} className="card-img-top my-2" alt={"image of " + icomblo.id} />
