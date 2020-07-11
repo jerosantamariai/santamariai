@@ -91,3 +91,18 @@ class Icomblog (db.Model):
             "icomcode": self.icomcode,
             "icomcreatedate": self.icomcreatedate,
         }
+
+class HomeCarousel (db.Model):
+    __tablename__ = 'homecarousel'
+    id = db.Column(db.Integer, primary_key=True)
+    hcimg = db.Column(db.String(100), nullable=False)
+    hctitle = db.Column(db.String(100), nullable=False)
+    hcp = db.Column(db.String(1000), nullable=True)
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "hcimg": self.hcimg,
+            "hctitle": self.hctitle,
+            "hcp": self.hcp,
+        }
