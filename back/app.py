@@ -4,7 +4,7 @@ from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 from flask_bcrypt import Bcrypt
 from flask_cors import CORS
-from models import db, Roles, Users, Fsblog, Icomblog
+from models import db, Roles, Users, Fsblog, Icomblog, HomeCarousel
 from flask_mail import Mail, Message
 from werkzeug.utils import secure_filename
 from functions import allowed_file
@@ -268,6 +268,83 @@ def icomblog(id = None):
             icomblogs = Icomblog.query.all()
             icomblogs = list(map(lambda icomblog: icomblog.serialize(), icomblogs))
             return jsonify(icomblogs), 200
+
+    if request.method == 'POST':
+        icomtitulo = request.json.get('icomtitulo', None)
+        icomurl = request.json.get('icomurl', None)
+        icomvideo = request.json.get('icomvideo', None)
+        icomfoto = request.json.get('icomfoto', None)
+        icomdescripcion = request.json.get('icomdescripcion', None)
+        icomsubtitulo = request.json.get('icomsubtitulo', None)
+        icomcuerpo = request.json.get('icomcuerpo', None)
+        icomcode = request.json.get('icomcode', None)
+        
+        icomblog = Icomblog()
+        
+        icomblog.icomtitulo = icomtitulo
+        icomblog.icomurl = icomurl
+        icomblog.icomvideo = icomvideo
+        icomblog.icomfoto = icomfoto
+        icomblog.icomdescripcion = icomdescripcion
+        icomblog.icomsubtitulo = icomsubtitulo
+        icomblog.icomcuerpo = icomcuerpo
+        icomblog.icomcode = icomcode
+        
+        db.session.add(icomblog) 
+        db.session.commit()  
+
+        return jsonify(icomblog.serialize()), 201
+    
+    if request.method == 'PUT':
+        icomtitulo = request.json.get('icomtitulo', None)
+        icomurl = request.json.get('icomurl', None)
+        icomvideo = request.json.get('icomvideo', None)
+        icomfoto = request.json.get('icomfoto', None)
+        icomdescripcion = request.json.get('icomdescripcion', None)
+        icomsubtitulo = request.json.get('icomsubtitulo', None)
+        icomcuerpo = request.json.get('icomcuerpo', None)
+        icomcode = request.json.get('icomcode', None)
+
+        icomblog = Icomblog.query.get(id)
+        if not icomblog:
+            return jsonify({"msg": "Blog no encontrado"}), 404
+         
+        icomblog.icomtitulo = icomtitulo
+        icomblog.icomurl = icomurl
+        icomblog.icomvideo = icomvideo
+        icomblog.icomfoto = icomfoto
+        icomblog.icomdescripcion = icomdescripcion
+        icomblog.icomsubtitulo = icomsubtitulo
+        icomblog.icomcuerpo = icomcuerpo
+        icomblog.icomcode = icomcode
+        
+        db.session.commit()  
+
+        return jsonify(icomblog.serialize()), 201
+
+    if request.method == 'DELETE':
+        icomblog = Icomblog.query.get(id)
+        if not icomblog:
+            return jsonify({"msg": "Blog no encontrado"}), 404
+        db.session.delete(icomblog)
+        db.session.commit()
+        return jsonify({"msg":"Blog borrado!"}), 200
+
+@app.route('/homecarousel', methods=['GET', 'POST'])
+@app.route('/homecarousel/<int:id>', methods=['GET', 'PUT', 'DELETE'])
+# @jwt_required
+def homecarousel(id = None):
+    if request.method == 'GET':
+        if id is not None:
+            hc = HomeCarousel.query.get(id)
+            if icomblog:
+                return jsonify(hc.serialize()), 200
+            else:
+                return jsonify({"msg": "Información del Carousel no encontrado"}), 404
+        else:
+            hcs = HomeCarousel.query.all()
+            hcs = list(map(lambda hc: hc.serialize(), hcs))
+            return jsonify(hcs), 200
 
     if request.method == 'POST':
         icomtitulo = request.json.get('icomtitulo', None)
