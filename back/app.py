@@ -500,6 +500,34 @@ def loadfsblog():
     print("Agregados los blog de fs de prueba")
 
 @manager.command
+def loadhc():
+    hc = HomeCarousel()
+    hc.hcimg = "https://picsum.photos/id/63/200/300"
+    hc.hcp = "Contenido del primer post"
+    hc.hctitle = "Primer Post"
+
+    db.session.add(hc)
+    db.session.commit()
+
+    hc = HomeCarousel()
+    hc.hcimg = "https://picsum.photos/id/6/200/300"
+    hc.hcp = "Contenido del segundo post"
+    hc.hctitle = "Segundo Post"
+
+    db.session.add(hc)
+    db.session.commit()
+
+    hc = HomeCarousel()
+    hc.hcimg = "https://picsum.photos/id/1/200/300"
+    hc.hcp = "Contenido del tercer post"
+    hc.hctitle = "Tercer Post"
+
+    db.session.add(hc)
+    db.session.commit()
+
+    print("HC creados")
+
+@manager.command
 def loadadmin():
     users = Users()
     users.email = "jero@santamariai.cl"

@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: da80585a1f4d
+Revision ID: 64f7cc4433be
 Revises: 
-Create Date: 2020-06-30 21:13:31.280818
+Create Date: 2020-07-11 21:49:32.993644
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'da80585a1f4d'
+revision = '64f7cc4433be'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -29,6 +29,13 @@ def upgrade():
     sa.Column('fscuerpo', sa.String(length=10000), nullable=False),
     sa.Column('fscode', sa.String(length=10000), nullable=True),
     sa.Column('fscreatedate', sa.DateTime(), nullable=True),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_table('homecarousel',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('hcimg', sa.String(length=100), nullable=False),
+    sa.Column('hctitle', sa.String(length=100), nullable=False),
+    sa.Column('hcp', sa.String(length=1000), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('icomblog',
@@ -71,5 +78,6 @@ def downgrade():
     op.drop_table('users')
     op.drop_table('roles')
     op.drop_table('icomblog')
+    op.drop_table('homecarousel')
     op.drop_table('fsblog')
     # ### end Alembic commands ###
