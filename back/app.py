@@ -380,12 +380,12 @@ def homecarousel(id = None):
         return jsonify(hcs.serialize()), 201
 
     if request.method == 'DELETE':
-        icomblog = Icomblog.query.get(id)
-        if not icomblog:
-            return jsonify({"msg": "Blog no encontrado"}), 404
-        db.session.delete(icomblog)
+        hc = HomeCarousel.query.get(id)
+        if not hc:
+            return jsonify({"msg": "Item no encontrado"}), 404
+        db.session.delete(hc)
         db.session.commit()
-        return jsonify({"msg":"Blog borrado!"}), 200
+        return jsonify({"msg":"Item borrado!"}), 200
 
 
 @manager.command
