@@ -387,7 +387,6 @@ def homecarousel(id = None):
         db.session.commit()
         return jsonify({"msg":"Item borrado!"}), 200
 
-
 @manager.command
 def loadroles():
     role = Roles()
@@ -497,7 +496,102 @@ def loadfsblog():
     db.session.add(fsblog)
     db.session.commit()
 
-    print("Agregados los blog de fs de prueba")
+    print("Agregados los blog de prueba de fs")
+
+@manager.command
+def loadicomblog():
+    icomblog = Icomblog()
+    icomblog.icomcode = "Code del Primer blog"
+    icomblog.icomcuerpo = "Cuerpo del Primer blog. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br /> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+    icomblog.icomdescripcion = "Descripcion del Primer blog"
+    icomblog.icomsubtitulo = "Subtitulo del Primer blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    icomblog.icomtitulo = "Primer Blog"
+    icomblog.icomurl = "Primer_blog"
+    icomblog.icomvideo = "Btlnfhh-Gac"
+    icomblog.icomfoto = "https://picsum.photos/300/400"
+
+    db.session.add(icomblog)
+    db.session.commit()
+
+    icomblog = Icomblog()
+    icomblog.icomcode = "Code del Segundo blog"
+    icomblog.icomcuerpo = "Cuerpo del Segundo blog. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br /> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+    icomblog.icomdescripcion = "Descripcion del Segundo blog"
+    icomblog.icomsubtitulo = "Subtitulo del Segundo blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    icomblog.icomtitulo = "Segundo Blog"
+    icomblog.icomurl = "segundo_blog"
+    icomblog.icomvideo = "Btlnfhh-Gac"
+    icomblog.icomfoto = "https://picsum.photos/300/400"
+
+    db.session.add(icomblog)
+    db.session.commit()
+
+    icomblog = Icomblog()
+    icomblog.icomcode = "Code del Tercer blog"
+    icomblog.icomcuerpo = "Cuerpo del Tercer blog. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br /> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+    icomblog.icomdescripcion = "Descripcion del Tercer blog"
+    icomblog.icomsubtitulo = "Subtitulo del Tercer blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    icomblog.icomtitulo = "Tercer Blog"
+    icomblog.icomurl = "tercer_blog"
+    icomblog.icomvideo = "Btlnfhh-Gac"
+    icomblog.icomfoto = "https://picsum.photos/300/400"
+
+    db.session.add(icomblog)
+    db.session.commit()
+
+    icomblog = Icomblog()
+    icomblog.icomcode = "Code del Cuarto blog"
+    icomblog.icomcuerpo = "Cuerpo del Cuarto blog. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br /> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+    icomblog.icomdescripcion = "Descripcion del Cuarto blog"
+    icomblog.icomsubtitulo = "Subtitulo del Cuarto blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    icomblog.icomtitulo = "Cuarto Blog"
+    icomblog.icomurl = "cuarto_blog"
+    icomblog.icomvideo = "Btlnfhh-Gac"
+    icomblog.icomfoto = "https://picsum.photos/300/400"
+
+    db.session.add(icomblog)
+    db.session.commit()
+
+    icomblog = Icomblog()
+    icomblog.icomcode = "Code del Quinto blog"
+    icomblog.icomcuerpo = "Cuerpo del Quinto blog. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br /> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+    icomblog.icomdescripcion = "Descripcion del Quinto blog"
+    icomblog.icomsubtitulo = "Subtitulo del Quinto blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    icomblog.icomtitulo = "Quinto Blog"
+    icomblog.icomurl = "quinto_blog"
+    icomblog.icomvideo = "Btlnfhh-Gac"
+    icomblog.icomfoto = "https://picsum.photos/300/400"
+
+    db.session.add(icomblog)
+    db.session.commit()
+
+    icomblog = Icomblog()
+    icomblog.icomcode = "Code del Sexto blog"
+    icomblog.icomcuerpo = "Cuerpo del Sexto blog. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br /> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+    icomblog.icomdescripcion = "Descripcion del Sexto blog"
+    icomblog.icomsubtitulo = "Subtitulo del Sexto blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    icomblog.icomtitulo = "Sexto Blog"
+    icomblog.icomurl = "sexto_blog"
+    icomblog.icomvideo = "Btlnfhh-Gac"
+    icomblog.icomfoto = "https://picsum.photos/300/400"
+
+    db.session.add(icomblog)
+    db.session.commit()
+
+    icomblog = Icomblog()
+    icomblog.icomcode = "Code del Septimo blog"
+    icomblog.icomcuerpo = "Cuerpo del Septimo blog. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br /> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+    icomblog.icomdescripcion = "Descripcion del Septimo blog"
+    icomblog.icomsubtitulo = "Subtitulo del Septimo blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    icomblog.icomtitulo = "Septimo Blog"
+    icomblog.icomurl = "septimo_blog"
+    icomblog.icomvideo = "Btlnfhh-Gac"
+    icomblog.icomfoto = "https://picsum.photos/300/400"
+
+    db.session.add(icomblog)
+    db.session.commit()
+
+    print("Agregados los blog de prueba de icom")
 
 @manager.command
 def loadhc():
