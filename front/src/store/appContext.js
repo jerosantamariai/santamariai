@@ -22,6 +22,7 @@ const injectContext = PassedComponent => {
         componentDidMount() {
             this.state.actions.getFsBlogs('http://localhost:5000/fsblog');
             this.state.actions.getIcomBlogs('http://localhost:5000/icomblog');
+            this.state.actions.getHC('http://localhost:5000/homecarousel');
         }
 
         render() {

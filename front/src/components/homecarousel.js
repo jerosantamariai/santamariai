@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from '../store/appContext';
 
 const HomeCarousel = props => {
+    const { store, actions } = useContext(Context)
     return (
         <>
             <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
@@ -9,29 +11,28 @@ const HomeCarousel = props => {
                     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
                 </ol>
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src="https://picsum.photos/id/187/200/100" className="d-block w-100" alt="..." />
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </div>
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://picsum.photos/id/354/200/100" className="d-block w-100" alt="..." />
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://picsum.photos/id/123/200/100" className="d-block w-100" alt="..." />
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                        </div>
-                    </div>
-                </div>
+                {
+                    !!store.hc ?
+                        store.hc.map((hcd, i) => {
+                            return (
+                                <div className="carousel-inner">
+                                    <div className="carousel-item active">
+                                        <img src={hcd.hcimg} className="d-block w-100" alt="..." />
+                                        <div className="carousel-caption d-none d-md-block">
+                                            <h5>{hcd.hctitle}</h5>
+                                            <p>{hcd.hcp}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+                        ) : (
+                            <div className="text-center" id="undefined">
+                                <div className="spinner-grow text-light" role="status">
+                                </div>
+                            </div>
+                        )
+                }
                 <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="sr-only">Previous</span>
