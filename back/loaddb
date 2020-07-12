@@ -5,5 +5,6 @@ python app.py db migrate
 python app.py db upgrade
 python app.py loadroles
 python app.py loadfsblog
+python app.py loadhc
 python app.py loadadmin
 python app.py runserver
