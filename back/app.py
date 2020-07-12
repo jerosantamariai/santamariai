@@ -363,31 +363,21 @@ def homecarousel(id = None):
         return jsonify(hcs.serialize()), 201
     
     if request.method == 'PUT':
-        icomtitulo = request.json.get('icomtitulo', None)
-        icomurl = request.json.get('icomurl', None)
-        icomvideo = request.json.get('icomvideo', None)
-        icomfoto = request.json.get('icomfoto', None)
-        icomdescripcion = request.json.get('icomdescripcion', None)
-        icomsubtitulo = request.json.get('icomsubtitulo', None)
-        icomcuerpo = request.json.get('icomcuerpo', None)
-        icomcode = request.json.get('icomcode', None)
+        hcimg = request.json.get('hcimg', None)
+        hctitle = request.json.get('hctitle', None)
+        hcp = request.json.get('hcp', None)
 
-        icomblog = Icomblog.query.get(id)
-        if not icomblog:
-            return jsonify({"msg": "Blog no encontrado"}), 404
+        hcs = HomeCarousel.query.get(id)
+        if not hcs:
+            return jsonify({"msg": "Item de Carousel no encontrado"}), 404
          
-        icomblog.icomtitulo = icomtitulo
-        icomblog.icomurl = icomurl
-        icomblog.icomvideo = icomvideo
-        icomblog.icomfoto = icomfoto
-        icomblog.icomdescripcion = icomdescripcion
-        icomblog.icomsubtitulo = icomsubtitulo
-        icomblog.icomcuerpo = icomcuerpo
-        icomblog.icomcode = icomcode
+        hcs.hcimg = hcimg
+        hcs.hctitle = hctitle
+        hcs.hcp = hcp
         
         db.session.commit()  
 
-        return jsonify(icomblog.serialize()), 201
+        return jsonify(hcs.serialize()), 201
 
     if request.method == 'DELETE':
         icomblog = Icomblog.query.get(id)
