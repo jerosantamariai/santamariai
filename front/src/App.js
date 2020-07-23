@@ -28,6 +28,7 @@ import MusicPlayer from './views/projects/exercises/musicplayer';
 import TodoList from './views/projects/exercises/todolist';
 import FsBlog from './views/fsblog';
 import IcomBlog from './views/icomblog';
+import PrintNames from './views/test';
 
 
 
@@ -38,6 +39,7 @@ const App = props => {
         <BrowserRouter>
           <Navbar />
           <Switch>
+            <Route exact path="/test" component={PrintNames} />
             <Route exact path="/proyectos" component={Projects} />
             <Route exact path="/proyectos/postal" component={PostCard} />
             <Route exact path="/proyectos/instagramindex" component={InstagramIndex} />
